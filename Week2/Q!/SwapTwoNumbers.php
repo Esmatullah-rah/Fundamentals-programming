@@ -8,3 +8,14 @@ a = 5, b = 10
 Output:
 a = 10, b = 5
 */
+<?php
+class SwapTwoNumbers
+{
+  function swap(int $a, int $b): void
+  {
+    $a += $b;
+    $b = $a - $b;
+    $a = $a - $b;
+    echo "A is {$a} and B is {$b}";
+  }
+}
