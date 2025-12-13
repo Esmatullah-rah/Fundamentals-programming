@@ -1,3 +1,4 @@
+<?php
 /*Esmatullah
 8. Determine if a number is positive, negative, or zero
 Description: Use if-else statements to categorize a number.
@@ -6,15 +7,16 @@ Input: -3
 Output:
 Negative */
 
-<?php
 class CheckNumber
 {
-  public function isNegative(int $number): bool
+  public function checkNumberSign(int $number)
   {
-    if ($number >= 0) {
-      return true;
+    if ($number > 0) {
+      return "positive";
+    } else if ($number < 0) {
+      return "Negative";
     } else {
-      return false;
+      return "The NUMBER is Zero !!!!";
     }
   }
 }

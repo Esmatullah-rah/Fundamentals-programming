@@ -9,34 +9,14 @@ class OddOrEvenTest extends TestCase
 {
   public function testAll()
   {
-    $oddOrEven = new OddOrEven();
+    $checker = new OddOrEven();
 
-    ob_start();
-    $oddOrEven->isOdd(3);
-    $this->assertEquals("3 is ODD. ", ob_get_clean());
+    $this->assertTrue($checker->isOdd(-1));
+    $this->assertTrue($checker->isOdd(3 / 5));
+    $this->assertTrue($checker->isOdd(999));
 
-    ob_start();
-    $oddOrEven->isOdd(10);
-    $this->assertEquals("10 is EVEN. ", ob_get_clean());
-
-    ob_start();
-    $oddOrEven->isOdd(0);
-    $this->assertEquals("0 is EVEN. ", ob_get_clean());
-
-    ob_start();
-    $oddOrEven->isOdd(-7);
-    $this->assertEquals("-7 is ODD. ", ob_get_clean());
-
-    ob_start();
-    $oddOrEven->isOdd(-12);
-    $this->assertEquals("-12 is EVEN. ", ob_get_clean());
-
-    ob_start();
-    $oddOrEven->isOdd(123456789);
-    $this->assertEquals("123456789 is ODD. ", ob_get_clean());
-
-    ob_start();
-    $oddOrEven->isOdd(98765432);
-    $this->assertEquals("98765432 is EVEN. ", ob_get_clean());
+    $this->assertFalse($checker->isOdd(0));
+    $this->assertFalse($checker->isOdd(2));
+    $this->assertFalse($checker->isOdd(1000));
   }
 }
