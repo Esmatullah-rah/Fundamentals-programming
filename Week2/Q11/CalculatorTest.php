@@ -9,26 +9,30 @@ class CalculatorTest extends TestCase
 {
   public function testAll()
   {
-    $calc = new Calculator();
+    $calculator = new Calculator();
 
     ob_start();
-    $calc->calculateTwoNumbers(3, 5, "+");
-    $this->assertEquals("+ of those numbers is 8 .", ob_get_clean());
+    $calculator->calculateTwoNumbers(5, 3, "+");
+    $this->assertEquals("Sum of those numbers is 8 .", ob_get_clean());
 
     ob_start();
-    $calc->calculateTwoNumbers(10, 4, "-");
-    $this->assertEquals("- of those numbers is 6 .", ob_get_clean());
+    $calculator->calculateTwoNumbers(5, 3, "-");
+    $this->assertEquals("Subtraction  of those numbers is 2 .", ob_get_clean());
 
     ob_start();
-    $calc->calculateTwoNumbers(6, 7, "*");
-    $this->assertEquals("* of those numbers is 42 .", ob_get_clean());
+    $calculator->calculateTwoNumbers(3, 5, "*");
+    $this->assertEquals("Multiplication of those numbers is 15 .", ob_get_clean());
 
     ob_start();
-    $calc->calculateTwoNumbers(20, 4, "/");
-    $this->assertEquals("/ of those numbers is 5 .", ob_get_clean());
+    $calculator->calculateTwoNumbers(10, 5, "/");
+    $this->assertEquals("Division of those numbers is 2 .", ob_get_clean());
 
     ob_start();
-    $calc->calculateTwoNumbers(5, 5, "%");
+    $calculator->calculateTwoNumbers(10, 0, "/");
+    $this->assertEquals("Division by zero!", ob_get_clean());
+
+    ob_start();
+    $calculator->calculateTwoNumbers(10, 5, "%");
     $this->assertEquals("invalid inputs!!!", ob_get_clean());
   }
 }

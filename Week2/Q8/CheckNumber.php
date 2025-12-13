@@ -9,12 +9,12 @@ Negative */
 <?php
 class CheckNumber
 {
-  public function isNegative(int $number)
+  public function isNegative(int $number): bool
   {
-    if ($number > 0) {
-      echo $number . " is positive. ";
+    if ($number >= 0) {
+      return true;
     } else {
-      echo $number . " is negative. ";
+      return false;
     }
   }
 }

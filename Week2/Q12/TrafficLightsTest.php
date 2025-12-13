@@ -12,27 +12,23 @@ class TrafficLightsTest extends TestCase
     $traffic = new TrafficLights();
 
     ob_start();
-    $traffic->lightChecking("Green");
+    $traffic->lightChecking("green");
     $this->assertEquals("GO !", ob_get_clean());
 
     ob_start();
-    $traffic->lightChecking("Red");
+    $traffic->lightChecking("red");
     $this->assertEquals("STOP !", ob_get_clean());
 
     ob_start();
-    $traffic->lightChecking("Yellow");
+    $traffic->lightChecking("yellow");
     $this->assertEquals("READY !", ob_get_clean());
 
     ob_start();
-    $traffic->lightChecking("green");
+    $traffic->lightChecking("blue");
     $this->assertEquals("Invalid input!!!", ob_get_clean());
 
     ob_start();
-    $traffic->lightChecking("");
-    $this->assertEquals("Invalid input!!!", ob_get_clean());
-
-    ob_start();
-    $traffic->lightChecking("Blue");
-    $this->assertEquals("Invalid input!!!", ob_get_clean());
+    $traffic->lightChecking("GREEN");
+    $this->assertEquals("GO !", ob_get_clean());
   }
 }

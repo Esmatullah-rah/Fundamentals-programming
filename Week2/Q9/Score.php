@@ -13,29 +13,29 @@ class Score
 {
   public function checkScore(int $score)
   {
+    if ($score > 100) {
+      return "invalid input";
+    }
     switch ($score) {
-      case $score > 100: {
-          echo "invalid input";
-        }
-        break;
+
       case $score >= 90: {
-          echo "A";
+          return "A";
         }
         break;
       case $score >= 80: {
-          echo "B";
+          return "B";
         }
         break;
       case $score >= 70: {
-          echo "C";
+          return "C";
         }
         break;
       case $score >= 60: {
-          echo "D";
+          return "D";
         }
         break;
       default: {
-          echo "You are a lazy student!!! \nstudy more";
+          return "You are a lazy student!!! \nstudy more";
         }
     }
   }

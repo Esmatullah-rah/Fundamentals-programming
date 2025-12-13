@@ -1,3 +1,4 @@
+<?php
 /*Esmatullah
 10. Leap Year Checker
 Description: Determine if a given year is a leap year.
@@ -12,19 +13,29 @@ Input:
 Output:
 Not leap year
 */
-<?php
 class LeapYear
 {
   public function leapYearCheck(int $number)
   {
-    if ($number > 1000) {
+    $leapYearPrint = $number . " is a leap year.";
+    $notLeapYearPrint = $number . " is not a leap year.";
+    if ($number >= 400) {
       if ($number % 4 == 0 && $number % 400 == 0) {
-        echo $number . " is a leap year.";
+        echo $leapYearPrint;
       } else {
-        echo $number . " is not a leap year.";
+        echo $notLeapYearPrint;
+      }
+    } else if ($number < 400) {
+      if ($number % 4 == 0) {
+        echo $leapYearPrint;
+      } else {
+        echo $notLeapYearPrint;
       }
     } else {
       echo "Invalid input year.";
     }
   }
 }
+
+$obj = new LeapYear;
+$obj->leapYearCheck(2222);

@@ -15,9 +15,14 @@ F = 77
 
 class CalculateTempture
 {
-  public function changeCelsiusToFahrenhiet(int $celsius)
+  public function celsiusToFahrenhiet(int $celsius)
   {
     $fahrenhiet = ($celsius * 9 / 5) + 32;
     echo $celsius . " degree Celsius is " . $fahrenhiet . " Fahrenhiet.";
+  }
+  public function fahrenhietToCelsiuse(int $fahrenhiet)
+  {
+    $celsius = ($fahrenhiet - 32) * 5 / 9;
+    echo $fahrenhiet . " degree Fahrehiet is " . $celsius . " Celsiuse.";
   }
 }
