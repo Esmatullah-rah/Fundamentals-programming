@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"CheckNumberTest::testAll":0.66,"CheckCharacterTest::testAll":0.609,"TriangleCheckerTest::testAll":0.267,"PrintNumberTest::testAll":0.63,"NaturalNumberTest::testAll":0.005,"MultiplicationTableTest::testAll":0.006}}
+{"version":2,"defects":[],"times":{"CheckNumberTest::testAll":0.66,"CheckCharacterTest::testAll":0.609,"TriangleCheckerTest::testAll":0.267,"PrintNumberTest::testAll":0.63,"NaturalNumberTest::testAll":0.005,"MultiplicationTableTest::testAll":0.006,"CountDigitTest::testAll":0.005}}
